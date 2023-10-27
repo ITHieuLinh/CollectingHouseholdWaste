@@ -57,25 +57,11 @@ public class GarbageCollectionCostDAO {
     }
 
     public void display(List<Integer> lt) {
-        /*
-        List<Integer> list = new ArrayList<Integer>();
-        list.add(1765);
-        list.add(2808);
-        list.add(952);
-        list.add(4206);
-        list.add(3102);
-        list.add(3902);
-        list.add(1292);
-        list.add(3985);
-        list.add(8324);
-        list.add(1928);
-        list.add(4426);
-        list.add(397);
-        list.add(3277);*/
         while (true) {
             getGarbage(lt);
             float a = calculator(lt);
             System.out.println("The total cost: " + a + "VND");
+            lt.clear();
             if (!l.checkInputYN("Do you want to continue(Y/N)?: ")) {
                 return;
             }
